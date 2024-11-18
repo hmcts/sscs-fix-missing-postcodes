@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'uk.gov.hmcts'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.20'
+    implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.4'
+    implementation group: 'uk.gov.service.notify', name: 'notifications-java-client', version: '4.1.0-RELEASE'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
